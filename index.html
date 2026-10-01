@@ -7,9 +7,11 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Roboto+Slab:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Kannada:wght@400;500;600;700;800&family=Noto+Sans+Kannada:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
-<body data-mode="subscribers-lite">
+<body data-mode="subscribers-lite" data-site="dh">
+  <div class="site-toggle" role="group" aria-label="Publication"><span>Design</span><button class="site-button active" type="button" data-site="dh" aria-pressed="true">DH</button><button class="site-button" type="button" data-site="pv" aria-pressed="false">PV</button></div>
   <header class="site-header">
     <div class="dh-masthead"><div class="dh-header-inner">
       <a class="dh-logo" href="#" aria-label="Deccan Herald home"><strong>DH</strong><small>DECCAN HERALD</small></a>
@@ -57,6 +59,79 @@
       </section></aside>
     </div>
   </main>
+
+  <div class="pv-root">
+    <header class="pv-header">
+      <div class="pv-masthead"><div class="pv-header-inner">
+        <a class="pv-logo" href="#" aria-label="Prajavani home"><strong>ಪ್ರಜಾವಾಣಿ</strong><small>ಕನ್ನಡಿಗರ ಅಚ್ಚುಮೆಚ್ಚಿನ ಸುದ್ದಿಮಾಧ್ಯಮ</small></a>
+        <nav class="pv-main-nav" aria-label="Primary navigation"><a href="#">ಇ-ಪೇಪರ್</a><a href="#">ಜಿಲ್ಲೆ</a><a href="#">ಸುದ್ದಿ</a><a href="#">ಸಿನಿಮಾ ರಂಜನೆ</a><a href="#">ಅಭಿಮತ</a><a href="#">ವಾಸ್ತು-ಜ್ಯೋತಿಷ್ಯ</a><a href="#">ಸಮಗ್ರ ಮಾಹಿತಿ</a></nav>
+        <div class="pv-actions"><button class="pv-action-icon" aria-label="Search">⌕</button><button class="pv-subscribe">▣&nbsp; ಚಂದಾದಾರರಾಗಿ</button><button class="pv-action-icon" aria-label="Login">◉</button><button class="pv-action-icon" aria-label="Open menu">☰</button></div>
+      </div></div>
+      <div class="pv-subnav"><div class="pv-subnav-inner"><span class="pv-subnav-flag" aria-hidden="true">📢</span><nav aria-label="Section navigation"><a href="#">ಪದಬಂಧ</a><a href="#">ಕ್ರೀಡೆ</a><a href="#">ಭೂಮಿಕಾ</a><a href="#">ಸಹಪಾಠಿ</a><a href="#">ಕೃಷಿ ದರ್ಶನ</a><a href="#">ಹೊರನಾಡ ಕನ್ನಡಿಗರು</a></nav></div></div>
+    </header>
+
+    <main class="pv-shell">
+      <div class="pv-grid">
+        <section class="pv-lead" aria-labelledby="pv-lead-heading">
+          <article class="pv-hero">
+            <a class="pv-hero-img" href="#"><img src="article-images/rtc-reform.jpg" alt="ಬಜೆಟ್ ಅಧಿವೇಶನ"></a>
+            <div class="pv-hero-copy">
+              <span class="pv-eyebrow pv-eyebrow-light">ಕರ್ನಾಟಕ</span>
+              <h1 id="pv-lead-heading">ಬಜೆಟ್ ಅಧಿವೇಶನ: ಹೊಸ ಯೋಜನೆಗಳಿಗೆ ಸಚಿವ ಸಂಪುಟ ಒಪ್ಪಿಗೆ, ಮೂಲಸೌಕರ್ಯಕ್ಕೆ... ನಗರ</h1>
+              <p class="pv-hero-sub">ಮೂಲಸೌಕರ್ಯ ಮತ್ತು ಶಿಕ್ಷಣ ವಲಯಕ್ಕೆ ಹೆಚ್ಚಿನ ಅನುದಾನ ಘೋಷಣೆ ಮಾಡಲಾಗಿದೆ; ಸಚಿವ ಸಂಪುಟದ ಒಪ್ಪಿಗೆ ನಂತರ ವಿವಿಧ ಯೋಜನೆಗಳಿಗೆ ಹಣಬಳಕೆ ವಿವರ ಸಲ್ಲಿಕೆ.</p>
+              <div class="pv-meta">4 ಗಂಟೆಗಳ ಹಿಂದೆ</div>
+            </div>
+          </article>
+          <div class="pv-divider" aria-hidden="true"></div>
+          <div class="pv-two-cards">
+            <article class="pv-card"><a href="#"><img src="article-images/navy-collision.jpg" alt=""></a><span class="pv-eyebrow">ದೇಶ</span><h2><a href="#">ಕೇಂದ್ರದಿಂದ ರೈತರಿಗೆ ಹೊಸ ಬೆಂಬಲ ಬೆಲೆ ಘೋಷ ಬೆಲೆ ಬೆಲೆ ಕೇಂದ್ರದಿಂದ ಪ್ರೋತ್ಸಾಹ ವ</a></h2><div class="pv-meta">4 ಗಂಟೆಗಳ ಹಿಂದೆ</div></article>
+            <article class="pv-card"><a href="#"><img src="article-images/onion-prices.jpg" alt=""></a><span class="pv-eyebrow">ವಿದೇಶ</span><h2><a href="#">ಕೇಂದ್ರದಿಂದ ರೈತರಿಗೆ ಹೊಸ ಬೆಂಬಲ ಬೆಲೆ ಘೋಷ ಬೆಲೆ ಬೆಲೆ ಕೇಂದ್ರದಿಂದ ಪ್ರೋತ್ಸಾಹ ವ</a></h2><div class="pv-meta">4 ಗಂಟೆಗಳ ಹಿಂದೆ</div></article>
+          </div>
+        </section>
+
+        <section class="pv-middle" aria-label="ಇನ್ನಷ್ಟು ಓದಿ">
+          <div class="pv-middle-panel">
+            <div class="pv-section-heading"><h2>ಇನ್ನಷ್ಟು ಓದಿ</h2><span class="pv-section-rule" aria-hidden="true"></span></div>
+            <article class="pv-cinema">
+              <a href="#"><img src="article-images/pet-dogs-policy.jpg" alt=""></a>
+              <span class="pv-eyebrow">ಸಿನಿಮಾ</span>
+              <h3><a href="#">ಕೇಂದ್ರದಿಂದ ರೈತರಿಗೆ ಹೊಸ ಬೆಂಬಲ ಬೆಲೆ ಘೋಷ ಬೆಲೆ ಬೆಲೆ ಕೇಂದ್ರದಿಂದ ಪ್ರೋತ್ಸಾಹ ವ</a></h3>
+              <p class="pv-cinema-sub">ಚಿತ್ರ ಮೊದಲ ವಾರದಲ್ಲೇ 50 ಕೋಟಿ ರೂ. ಗಳಿಕೆ ದಾಖಲಿಸಿದೆ</p>
+              <div class="pv-meta">4 ಗಂಟೆಗಳ ಹಿಂದೆ</div>
+            </article>
+            <article class="pv-thumb-row"><a class="pv-thumb-img" href="#"><img src="article-images/rahul-upi.jpg" alt=""></a><div class="pv-thumb-text"><span class="pv-eyebrow">ಸಿನಿಮಾ</span><h3><a href="#">ಕೇಂದ್ರದಿಂದ ರೈತರಿಗೆ ಹೊಸ ಬೆಂಬಲ ಬೆಲೆ ಘೋಷ ಬೆಲೆ ಬೆಲೆ ಕೇಂದ್ರದಿಂದ ಪ್ರೋತ್ಸಾಹ ವ</a></h3><div class="pv-meta">4 ಗಂಟೆಗಳ ಹಿಂದೆ</div></div></article>
+            <article class="pv-thumb-row"><a class="pv-thumb-img" href="#"><img src="article-images/onion-prices.jpg" alt=""></a><div class="pv-thumb-text"><span class="pv-eyebrow">ಸಿನಿಮಾ</span><h3><a href="#">ಹೊಸ ಕನ್ನಡ ಚಿತ್ರ 'ಬೆಳಕು' ಬಾಕ್ಸ್ ಆಫೀಸ್‌ನಲ್ಲಿ ಯಶಸ್ಸು ಪ್ರೇಕ್ಷಕರ ಮೆಚ್ಚುಗೆ ವಿ</a></h3><div class="pv-meta">4 ಗಂಟೆಗಳ ಹಿಂದೆ</div></div></article>
+          </div>
+          <aside class="pv-subhashita">
+            <div class="pv-avatar-ring"><img src="subhashita-avatar.png" alt="ಅತಿಥಿ ಅಂಕಣಕಾರ"></div>
+            <div class="pv-subhashita-text">
+              <div class="pv-subhashita-title"><img class="pv-subhashita-mark" src="subhashita-left.svg" alt="" aria-hidden="true"><strong>ಸುಭಾಷಿತ</strong><img class="pv-subhashita-mark" src="subhashita-right.svg" alt="" aria-hidden="true"></div>
+              <p class="pv-quote">ಸತ್ಯವನ್ನು ಹುಡುಕುವ ಧೈರ್ಯವೇ ನಿಜವಾದ ಜ್ಞಾನ. ಸತ್ಯವನ್ನು ಹುಡುಕುವ</p>
+              <p class="pv-attribution">— ಅತಿಥಿ ಅಂಕಣಕಾರ</p>
+            </div>
+          </aside>
+        </section>
+
+        <aside class="pv-premium" aria-label="ಪ್ರಜಾವಾಣಿ ಪ್ರೀಮಿಯಂ">
+          <div class="pv-premium-header"><img src="premium-icon.png" alt=""><h2>ಪ್ರಜಾವಾಣಿ ಪ್ರೀಮಿಯಂ</h2></div>
+          <div class="pv-premium-body">
+            <article class="pv-premium-lead">
+              <a href="#"><img src="article-images/rtc-reform.jpg" alt=""></a>
+              <span class="pv-eyebrow pv-eyebrow-premium">ಬೆಂಗಳೂರು</span>
+              <h3><img class="pv-nandi-badge" src="premium-icon.png" alt="" aria-hidden="true"><a href="#">ಕೇಂದ್ರದಿಂದ ರೈತರಿಗೆ ಹೊಸ ಬೆಂಬಲ ಬೆಲೆ ಘೋಷ ಬೆಲೆ ಬೆಲೆ ಕೇಂದ್ರದಿಂದ ಪ್ರೋತ್ಸಾಹ ವ</a></h3>
+              <p class="pv-premium-sub">ನಗರದ ಮೂರು ಕಾರಿಡಾರ್‌ಗಳಲ್ಲಿ ಭೂಮಿ ಕಳೆದುಕೊಂಡವರಿಗೆ ಪರಿಹಾರದ ವ್ಯವಸ್ಥೆ</p>
+              <div class="pv-meta">4 ಗಂಟೆಗಳ ಹಿಂದೆ</div>
+            </article>
+            <article class="pv-premium-row"><a class="pv-thumb-img" href="#"><img src="article-images/pet-dogs-policy.jpg" alt=""></a><div class="pv-thumb-text"><span class="pv-eyebrow pv-eyebrow-premium">ಬೆಂಗಳೂರು</span><h3><img class="pv-nandi-badge" src="premium-icon.png" alt="" aria-hidden="true"><a href="#">ಸಚಿವ ಸಂಪುಟ ವಿಸ್ತರಣೆ: ಹೊಸ ಮುಖಗಳಿಗೆ ಅವಕಾಶ? ಮುಖಗಳಿಗೆ ಈಗ ಉತ್ತರ ಸಿಕ್ಕಿದೆ ವಿ</a></h3><div class="pv-meta">4 ಗಂಟೆಗಳ ಹಿಂದೆ</div></div></article>
+            <article class="pv-premium-row"><a class="pv-thumb-img" href="#"><img src="article-images/rahul-upi.jpg" alt=""></a><div class="pv-thumb-text"><span class="pv-eyebrow pv-eyebrow-premium">ಬೆಂಗಳೂರು</span><h3><img class="pv-nandi-badge" src="premium-icon.png" alt="" aria-hidden="true"><a href="#">ರಾಜ್ಯ ವಿಧಾನಸಭೆ ಅಧಿವೇಶನ: ಪ್ರಮುಖ ಮಸೂದೆಗಳ ಚರ್ಚೆ ಮುಂದುವರಿಕೆ ಕಾಣುತ್ತಿದೆ ನಗರ</a></h3><div class="pv-meta">4 ಗಂಟೆಗಳ ಹಿಂದೆ</div></div></article>
+            <article class="pv-premium-row"><a class="pv-thumb-img" href="#"><img src="article-images/onion-prices.jpg" alt=""></a><div class="pv-thumb-text"><span class="pv-eyebrow pv-eyebrow-premium">ಬೆಂಗಳೂರು</span><h3><img class="pv-nandi-badge" src="premium-icon.png" alt="" aria-hidden="true"><a href="#">ಸ್ಮಾರ್ಟ್ ಸಿಟಿ ಯೋಜನೆಯಡಿ ನಗರದಲ್ಲಿ ಹೊಸ ರಸ್ತೆ ಅಭಿವೃದ್ಧಿ ಕಾಮಗಾರಿ ಆರಂಭವಾಗಿದೆ</a></h3><div class="pv-meta">4 ಗಂಟೆಗಳ ಹಿಂದೆ</div></div></article>
+            <a class="pv-premium-cta" href="#">ಎಲ್ಲಾ ಪ್ರೀಮಿಯಂ ಲೇಖನಗಳನ್ನು ನೋಡಿ →</a>
+          </div>
+        </aside>
+      </div>
+    </main>
+  </div>
+
   <script src="script.js"></script>
 </body>
 </html>

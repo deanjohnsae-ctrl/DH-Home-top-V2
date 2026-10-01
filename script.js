@@ -61,3 +61,12 @@ menuButton?.addEventListener('click',()=>menuPanel?.hidden?openSiteMenu(menuButt
 searchButton?.addEventListener('click',()=>openSiteMenu(searchButton,searchInput));
 closeMenu?.addEventListener('click',closeSiteMenu);
 document.addEventListener('keydown',event=>{if(event.key==='Escape'&&menuPanel&&!menuPanel.hidden)closeSiteMenu()});
+const siteButtons=[...document.querySelectorAll('.site-button')];
+siteButtons.forEach(button=>button.addEventListener('click',()=>{
+  body.dataset.site=button.dataset.site;
+  siteButtons.forEach(item=>{
+    const active=item===button;
+    item.classList.toggle('active',active);
+    item.setAttribute('aria-pressed',String(active));
+  });
+}));
