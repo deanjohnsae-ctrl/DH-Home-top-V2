@@ -70,3 +70,12 @@ siteButtons.forEach(button=>button.addEventListener('click',()=>{
     item.setAttribute('aria-pressed',String(active));
   });
 }));
+const pvModeButtons=[...document.querySelectorAll('.pv-mode-button')];
+pvModeButtons.forEach(button=>button.addEventListener('click',()=>{
+  body.dataset.pvMode=button.dataset.pvMode;
+  pvModeButtons.forEach(item=>{
+    const active=item===button;
+    item.classList.toggle('active',active);
+    item.setAttribute('aria-pressed',String(active));
+  });
+}));
