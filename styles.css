@@ -207,7 +207,7 @@ body[data-site="pv"] main.page-wrap{display:none}
 body[data-site="pv"] .pv-root{display:block}
 
 /* --- PV base --- */
-.pv-root{font-family:var(--pv-font);color:var(--pv-ink);background:#fff}
+.pv-root{font-family:var(--pv-font);color:var(--pv-ink);background:#fff;overflow-x:clip}
 .pv-root img{display:block;max-width:100%;object-fit:cover}
 .pv-shell{width:min(var(--shell),calc(100% - 44px));margin:auto;padding:18px 0 70px}
 .pv-eyebrow{display:block;color:var(--pv-red);font-weight:600;font-size:14px}
@@ -317,13 +317,36 @@ body[data-site="pv"] .pv-root{display:block}
 }
 @media (max-width:700px){
   .pv-shell{width:calc(100% - 20px);padding-top:10px}
-  .pv-header-inner{height:58px}
-  .pv-logo strong{font-size:25px}
+  .pv-header-inner{height:58px;gap:8px}
+  .pv-logo{min-width:0}
+  .pv-logo strong{font-size:22px}
   .pv-logo small{font-size:8px}
-  .pv-subscribe{font-size:12px;padding:7px 9px}
+  .pv-actions{gap:6px}
+  .pv-actions button[aria-label="Search"],.pv-actions button[aria-label="Login"]{display:none}
+  .pv-subscribe{font-size:11px;padding:6px 8px}
+  .pv-hero-copy{padding:15px}
   .pv-hero-copy h1{font-size:24px}
-  .pv-two-cards{gap:12px}
-  .pv-card h2{font-size:16px}
+  .pv-divider{display:none}
+  .pv-two-cards{grid-template-columns:1fr;gap:0}
+  .pv-card{display:grid;grid-template-columns:minmax(0,42%) minmax(0,1fr);column-gap:12px;align-items:start;padding:12px 0;border-top:1px solid var(--pv-line)}
+  .pv-card>a{grid-column:1;grid-row:1/span 3}
+  .pv-card .pv-eyebrow,.pv-card h2,.pv-card .pv-meta{grid-column:2}
+  .pv-card .pv-eyebrow{font-size:10px;margin:0}
+  .pv-card h2{font-size:15px;line-height:1.18;margin:4px 0}
+  .pv-card .pv-meta{font-size:10px;margin:3px 0 0}
+  /* Match DH mobile: 3px image radius across all PV imagery */
+  .pv-card img,.pv-cinema img,.pv-thumb-img img,.pv-premium-lead>a img,.pv-premium-row img{border-radius:3px}
+  .pv-card img{width:100%;height:auto;aspect-ratio:1.5}
+  /* Match DH mobile thumbnail rows: image size, 12px gap, 12px vertical padding, compact type.
+     44% (vs 42%) compensates for the 9px panel padding so the image renders at DH's full-shell px. */
+  .pv-thumb-row,.pv-premium-row{grid-template-columns:minmax(0,44%) minmax(0,1fr);column-gap:12px;padding:12px 0}
+  .pv-thumb-text .pv-eyebrow,.pv-premium-row .pv-eyebrow{font-size:10px}
+  .pv-thumb-text h3,.pv-premium-row h3{font-size:14px;line-height:1.18}
+  .pv-thumb-text .pv-meta,.pv-premium-row .pv-meta{font-size:10px}
+  /* Match DH mobile panel compactness (9px sides like DH premium panel) */
+  .pv-middle-panel{padding:12px 9px 10px}
+  .pv-premium-body{padding:12px 9px 10px}
+  .pv-premium-header{padding:0 9px}
   .pv-subhashita{flex-direction:column;text-align:center}
   .pv-subhashita-text{display:flex;flex-direction:column;align-items:center}
   .pv-subhashita-title{justify-content:center}
