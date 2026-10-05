@@ -4,7 +4,7 @@ const storyButtons=[...document.querySelectorAll('.story-button')];
 const heroStory=document.querySelector('.hero-story');
 const heroImageLink=heroStory?.querySelector('.hero-image-wrap');
 const heroImage=heroStory?.querySelector('.hero-image-wrap img');
-const heroCategory=heroStory?.querySelector('.hero-copy .eyebrow');
+
 const heroHeadline=heroStory?.querySelector('#lead-heading');
 const heroSubheading=heroStory?.querySelector('.hero-subheading');
 const heroMeta=heroStory?.querySelector('.story-meta');
@@ -21,7 +21,7 @@ function setMainStory(key){
   heroImageLink.href=story.href;
   heroImage.src=story.image;
   heroImage.alt=story.alt;
-  heroCategory.textContent=story.category;
+
   heroHeadline.textContent=story.title;
   heroSubheading.textContent=story.subheading;
   heroMeta.innerHTML='<span class="meta-time">'+story.time+'</span><span class="read-time">'+story.read+'</span>';
