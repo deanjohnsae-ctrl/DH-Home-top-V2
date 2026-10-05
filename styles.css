@@ -230,6 +230,7 @@ body[data-site="pv"] .pv-root{display:block}
 .pv-eyebrow{display:block;color:var(--pv-red);font-weight:600;font-size:14px}
 .pv-eyebrow-premium{color:var(--pv-premium-cat)}
 .pv-meta{font-size:14px;color:var(--pv-muted);margin-top:6px}
+.pv-time-short{display:none}
 
 /* --- PV header --- */
 .pv-masthead{background:#fff;border-bottom:1px solid #eee}
@@ -351,6 +352,11 @@ body[data-pv-mode="with-ad"] .pv-premium-extra{display:none}
 }
 @media (max-width:700px){
   .pv-shell{width:calc(100% - 20px);padding-top:10px}
+  .pv-time-full{display:none}
+  .pv-time-short{display:inline}
+  .pv-meta{flex-wrap:wrap}
+  .pv-meta .meta-time{flex:none;overflow:visible;text-overflow:clip}
+  .pv-meta .read-time{margin-left:auto}
   /* Premium block: show only the first 3 stories on mobile */
   .pv-premium-row:nth-of-type(n+4){display:none}
   .pv-header-inner{height:58px;gap:8px}
