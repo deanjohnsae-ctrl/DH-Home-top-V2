@@ -198,7 +198,7 @@ img{display:block;max-width:100%;object-fit:cover}
   --pv-panel:#f7fafa;
   --pv-panel-border:#d9dede;
   --pv-subhashita-border:#eb1a25;
-  --pv-font:"Noto Serif Kannada","Noto Sans Kannada",Georgia,serif;
+  --pv-font:"Prajavani Text",Georgia,serif;
 }
 
 /* --- Toggle control (visible in both DH and PV) --- */
@@ -217,6 +217,8 @@ body[data-site="pv"] .pv-root{display:block}
 .pv-root{font-family:var(--pv-font);color:var(--pv-ink);background:#fff;overflow-x:clip}
 .pv-root img{display:block;max-width:100%;object-fit:cover}
 .pv-shell{width:min(var(--shell),calc(100% - 44px));margin:auto;padding:18px 0 70px}
+/* Keep every PV heading to a maximum of three lines. */
+.pv-root h1,.pv-root h2,.pv-root h3{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:3;overflow:hidden}
 .pv-eyebrow{display:block;color:var(--pv-red);font-weight:600;font-size:14px}
 .pv-eyebrow-premium{color:var(--pv-premium-cat)}
 .pv-meta{font-size:13px;color:var(--pv-muted);margin-top:6px}
