@@ -226,9 +226,10 @@ body[data-site="pv"] .pv-root{display:block}
 .pv-shell{width:min(var(--shell),calc(100% - 44px));margin:auto;padding:18px 0 70px}
 /* Keep every PV heading to a maximum of three lines. */
 .pv-root h1,.pv-root h2,.pv-root h3{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:3;overflow:hidden}
+.pv-hero-sub,.pv-cinema-sub,.pv-premium-sub{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:3;overflow:hidden}
 .pv-eyebrow{display:block;color:var(--pv-red);font-weight:600;font-size:14px}
 .pv-eyebrow-premium{color:var(--pv-premium-cat)}
-.pv-meta{font-size:13px;color:var(--pv-muted);margin-top:6px}
+.pv-meta{font-size:14px;color:var(--pv-muted);margin-top:6px}
 
 /* --- PV header --- */
 .pv-masthead{background:#fff;border-bottom:1px solid #eee}
@@ -280,7 +281,7 @@ body[data-pv-mode="with-ad"] .pv-premium-extra{display:none}
 .pv-card>a{display:block}
 .pv-card img{width:100%;aspect-ratio:1.5;border-radius:3px}
 .pv-card .pv-eyebrow{margin-top:8px}
-.pv-card h2{font:600 20px/1.2 var(--pv-font);margin:6px 0 0}
+.pv-card h2{font:600 16px/1.2 var(--pv-font);margin:6px 0 0}
 .pv-card h2 a,.pv-cinema h3 a,.pv-thumb-text h3 a,.pv-premium-lead h3 a{text-decoration:none;color:inherit}
 
 /* --- PV middle column --- */
@@ -291,8 +292,8 @@ body[data-pv-mode="with-ad"] .pv-premium-extra{display:none}
 .pv-section-rule{display:block;height:2px;background:var(--pv-red);margin-top:8px}
 .pv-cinema>a{display:block}
 .pv-cinema img{width:100%;aspect-ratio:1.5;border-radius:3px}
-.pv-cinema .pv-eyebrow{margin-top:8px;font-size:16px}
-.pv-cinema h3{font:600 20px/1.2 var(--pv-font);margin:4px 0}
+.pv-cinema .pv-eyebrow{margin-top:8px;font-size:14px}
+.pv-cinema h3{font:600 16px/1.2 var(--pv-font);margin:4px 0}
 .pv-cinema-sub{font-size:16px;color:var(--pv-body);line-height:1.4;margin:0}
 .pv-thumb-row{display:grid;grid-template-columns:minmax(0,42%) minmax(0,1fr);gap:10px;border-top:1px solid var(--pv-line);padding-top:12px}
 .pv-thumb-img{display:block}
@@ -314,7 +315,7 @@ body[data-pv-mode="with-ad"] .pv-premium-extra{display:none}
 .pv-premium{background:var(--pv-premium-bg);border:1px solid var(--pv-premium-border);border-radius:4px;overflow:hidden}
 .pv-premium-header{display:flex;align-items:center;justify-content:center;gap:10px;height:50px;padding:0 16px;background:var(--pv-premium-deep)}
 .pv-premium-header img{width:24px;height:24px;object-fit:contain}
-.pv-premium-header h2{margin:0;color:#fff2d9;font:600 18px var(--pv-font)}
+.pv-premium-header h2{margin:0;color:#fff2d9;font:600 20px var(--pv-font)}
 .pv-premium-body{padding:16px;display:flex;flex-direction:column;gap:12px}
 .pv-premium-lead>a{display:block}
 .pv-premium-lead>a img{width:100%;aspect-ratio:1.5;border-radius:3px}
@@ -366,18 +367,18 @@ body[data-pv-mode="with-ad"] .pv-premium-extra{display:none}
   .pv-card{display:grid;grid-template-columns:minmax(0,42%) minmax(0,1fr);column-gap:12px;align-items:start;padding:12px 0;border-top:1px solid var(--pv-line)}
   .pv-card>a{grid-column:1;grid-row:1/span 3}
   .pv-card .pv-eyebrow,.pv-card h2,.pv-card .pv-meta{grid-column:2}
-  .pv-card .pv-eyebrow{font-size:10px;margin:0}
-  .pv-card h2{font-size:15px;line-height:1.18;margin:4px 0}
-  .pv-card .pv-meta{font-size:10px;margin:3px 0 0}
+  .pv-card .pv-eyebrow{font-size:14px;margin:0}
+  .pv-card h2{font-size:16px;line-height:1.18;margin:4px 0}
+  .pv-card .pv-meta{font-size:14px;margin:3px 0 0}
   /* Match DH mobile: 3px image radius across all PV imagery */
   .pv-card img,.pv-cinema img,.pv-thumb-img img,.pv-premium-lead>a img,.pv-premium-row img{border-radius:3px}
   .pv-card img{width:100%;height:auto;aspect-ratio:1.5}
   /* Match DH mobile thumbnail rows: image size, 12px gap, 12px vertical padding, compact type.
      44% (vs 42%) compensates for the 9px panel padding so the image renders at DH's full-shell px. */
   .pv-thumb-row,.pv-premium-row{grid-template-columns:minmax(0,44%) minmax(0,1fr);column-gap:12px;padding:12px 0}
-  .pv-thumb-text .pv-eyebrow,.pv-premium-row .pv-eyebrow{font-size:10px}
-  .pv-thumb-text h3,.pv-premium-row h3{font-size:14px;line-height:1.18}
-  .pv-thumb-text .pv-meta,.pv-premium-row .pv-meta{font-size:10px}
+  .pv-thumb-text .pv-eyebrow,.pv-premium-row .pv-eyebrow{font-size:14px}
+  .pv-thumb-text h3,.pv-premium-row h3{font-size:16px;line-height:1.18}
+  .pv-thumb-text .pv-meta,.pv-premium-row .pv-meta{font-size:14px}
   /* Match DH mobile panel compactness (9px sides like DH premium panel) */
   .pv-middle-panel{padding:12px 9px 10px}
   .pv-premium-body{padding:12px 9px 10px}
