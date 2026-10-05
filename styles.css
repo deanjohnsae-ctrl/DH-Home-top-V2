@@ -57,6 +57,11 @@ img{display:block;max-width:100%;object-fit:cover}
 .hero-subheading{font-size:16px;line-height:1.45;margin:0 0 10px}
 .story-meta{font-size:11px;color:var(--muted);margin-top:8px}
 .hero-copy .story-meta{color:#eee}
+/* Meta row: relative time on the left, read-time (icon + text) aligned right */
+.story-meta,.pv-meta{display:flex;align-items:center;justify-content:space-between;gap:8px}
+.meta-time{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.read-time{display:inline-flex;align-items:center;gap:4px;flex:none;white-space:nowrap}
+.read-time::before{content:"";width:1em;height:1em;flex:none;background:currentColor;-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M8 1C4.13438 1 1 4.13438 1 8C1 11.8656 4.13438 15 8 15C11.8656 15 15 11.8656 15 8C15 4.13438 11.8656 1 8 1ZM8 13.8125C4.79063 13.8125 2.1875 11.2094 2.1875 8C2.1875 4.79063 4.79063 2.1875 8 2.1875C11.2094 2.1875 13.8125 4.79063 13.8125 8C13.8125 11.2094 11.2094 13.8125 8 13.8125Z'/%3E%3Cpath d='M10.7297 9.97812L8.50156 8.36719V4.5C8.50156 4.43125 8.44531 4.375 8.37656 4.375H7.625C7.55625 4.375 7.5 4.43125 7.5 4.5V8.80313C7.5 8.84375 7.51875 8.88125 7.55156 8.90469L10.1359 10.7891C10.1922 10.8297 10.2703 10.8172 10.3109 10.7625L10.7578 10.1531C10.7984 10.0953 10.7859 10.0172 10.7297 9.97812Z'/%3E%3C/svg%3E") center/contain no-repeat;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M8 1C4.13438 1 1 4.13438 1 8C1 11.8656 4.13438 15 8 15C11.8656 15 15 11.8656 15 8C15 4.13438 11.8656 1 8 1ZM8 13.8125C4.79063 13.8125 2.1875 11.2094 2.1875 8C2.1875 4.79063 4.79063 2.1875 8 2.1875C11.2094 2.1875 13.8125 4.79063 13.8125 8C13.8125 11.2094 11.2094 13.8125 8 13.8125Z'/%3E%3Cpath d='M10.7297 9.97812L8.50156 8.36719V4.5C8.50156 4.43125 8.44531 4.375 8.37656 4.375H7.625C7.55625 4.375 7.5 4.43125 7.5 4.5V8.80313C7.5 8.84375 7.51875 8.88125 7.55156 8.90469L10.1359 10.7891C10.1922 10.8297 10.2703 10.8172 10.3109 10.7625L10.7578 10.1531C10.7984 10.0953 10.7859 10.0172 10.7297 9.97812Z'/%3E%3C/svg%3E") center/contain no-repeat}
 .secondary-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:14px}
 .story-card{min-width:0;border-top:1px solid var(--line);padding-top:12px}
 .story-card>a{display:block}
