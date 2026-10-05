@@ -1,3 +1,5 @@
+@font-face{font-family:"Prajavani Text";src:url("fonts/PrajavaniText-Regular.ttf") format("truetype");font-style:normal;font-weight:400 500;font-display:swap}
+@font-face{font-family:"Prajavani Text";src:url("fonts/PrajavaniText-Semibold.ttf") format("truetype");font-style:normal;font-weight:600 800;font-display:swap}
 :root{color-scheme:light;--ink:#151515;--muted:#727272;--line:#dedede;--teal:#0796ad;--gold:#ffb000;--premium:#fff4d6;--premium-deep:#54251e;--shell:1400px}
 *{box-sizing:border-box}
 html{color:var(--ink);background:#fff;font-family:"Roboto Slab",Georgia,serif}
