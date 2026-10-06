@@ -477,3 +477,19 @@ body[data-pv-mode="ad-lite"] .pv-premium-row:nth-of-type(n+4){display:none}
   body[data-pv-mode="with-ad"] .pv-premium-row:nth-of-type(4){display:grid}
   body[data-pv-mode="with-ad"] .pv-premium-cta{margin-top:0}
 }
+/* Balance PV mobile story spacing without stacking container gaps and padding. */
+@media (max-width:700px){
+  .pv-hero-copy,.pv-card,.pv-cinema,.pv-thumb-row,.pv-premium-lead,.pv-premium-row{padding-top:12px;padding-bottom:12px}
+  .pv-middle-panel{padding-bottom:0;gap:0}
+  .pv-middle-stories{gap:0}
+  .pv-premium-body{padding-top:0;padding-bottom:12px;gap:0}
+  .pv-premium-cta{margin-top:0}
+}
+/* Balance every DH mobile story with equal top and bottom padding. */
+@media (max-width:700px){
+  .hero-copy,.story-card,.news-card,.premium-feature,.compact-story{padding-top:12px;padding-bottom:12px}
+  .premium-panel{padding-bottom:12px;gap:0}
+  .premium-heading{margin-bottom:0}
+  .premium-list{gap:0}
+  .premium-cta{margin-top:0}
+}
