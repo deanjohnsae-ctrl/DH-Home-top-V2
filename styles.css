@@ -463,3 +463,17 @@ body[data-pv-mode="ad-lite"] .pv-premium-row:nth-of-type(n+4){display:none}
 @media (max-width:700px){
   body[data-pv-mode="with-ad"] .pv-mobile-main-ad{display:block}
 }
+/* Fit an extra PV Ad Lite premium story on desktops without increasing block height. */
+@media (min-width:1280px){
+  body[data-pv-mode="ad-lite"] .pv-premium-body{padding-top:8px;padding-bottom:8px;gap:4px}
+  body[data-pv-mode="ad-lite"] .pv-premium-row{padding-top:4px}
+  body[data-pv-mode="ad-lite"] .pv-premium-row:nth-of-type(4){display:grid}
+  body[data-pv-mode="ad-lite"] .pv-premium-cta{margin-top:0}
+}
+/* Fit a fourth PV With Ad premium story on desktops without adding block height. */
+@media (min-width:1280px){
+  body[data-pv-mode="with-ad"] .pv-premium-body{padding-top:8px;padding-bottom:8px;gap:4px}
+  body[data-pv-mode="with-ad"] .pv-premium-row{padding-top:4px}
+  body[data-pv-mode="with-ad"] .pv-premium-row:nth-of-type(4){display:grid}
+  body[data-pv-mode="with-ad"] .pv-premium-cta{margin-top:0}
+}
