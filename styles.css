@@ -386,11 +386,11 @@ body[data-pv-mode="with-ad"] .pv-premium-extra{display:none}
   .pv-actions{gap:6px}
   .pv-actions button[aria-label="Search"],.pv-actions button[aria-label="Login"]{display:none}
   .pv-subscribe{font-size:11px;padding:6px 8px}
-  .pv-hero-copy{padding:15px}
+  .pv-hero-copy{padding:15px 15px 0}
   .pv-hero-copy h1{font-size:24px}
   .pv-divider{display:none}
   .pv-two-cards{grid-template-columns:1fr;gap:0}
-  .pv-card{display:grid;grid-template-columns:minmax(0,42%) minmax(0,1fr);column-gap:12px;align-items:start;padding:12px 0;border-top:1px solid var(--pv-line)}
+  .pv-card{display:grid;grid-template-columns:minmax(0,42%) minmax(0,1fr);column-gap:12px;align-items:start;padding:12px 0 0;border-top:1px solid var(--pv-line)}
   .pv-card>a{grid-column:1;grid-row:1/span 2}
   .pv-card .pv-eyebrow,.pv-card h2,.pv-card .pv-meta{grid-column:2}
   .pv-card .pv-eyebrow{font-size:14px;margin:0}
@@ -399,9 +399,9 @@ body[data-pv-mode="with-ad"] .pv-premium-extra{display:none}
   /* Match DH mobile: 3px image radius across all PV imagery */
   .pv-card img,.pv-cinema img,.pv-thumb-img img,.pv-premium-lead>a img,.pv-premium-row img{border-radius:3px}
   .pv-card img{width:100%;height:auto;aspect-ratio:1.5}
-  /* Match DH mobile thumbnail rows: image size, 12px gap, 12px vertical padding, compact type.
+  /* Match DH mobile thumbnail rows: image size, 12px gap, 12px top padding, compact type.
      44% (vs 42%) compensates for the 9px panel padding so the image renders at DH's full-shell px. */
-  .pv-thumb-row,.pv-premium-row{grid-template-columns:minmax(0,44%) minmax(0,1fr);column-gap:12px;padding:12px 0}
+  .pv-thumb-row,.pv-premium-row{grid-template-columns:minmax(0,44%) minmax(0,1fr);column-gap:12px;padding:12px 0 0}
   .pv-thumb-text .pv-eyebrow,.pv-premium-row .pv-eyebrow{font-size:14px}
   .pv-thumb-text h3,.pv-premium-row h3{font-size:16px;line-height:normal}
   .pv-thumb-text .pv-meta,.pv-premium-row .pv-meta{font-size:14px}
@@ -413,4 +413,53 @@ body[data-pv-mode="with-ad"] .pv-premium-extra{display:none}
   .pv-subhashita-text{display:flex;flex-direction:column;align-items:center}
   .pv-subhashita-title{justify-content:center}
   .site-toggle{bottom:12px}
+}
+
+/* DH mobile metadata spans the card below its image and headline. */
+@media (max-width:700px){
+  .hero-copy{padding-bottom:8px}
+  .story-card,.news-card{padding-bottom:8px}
+  .story-card>a,.news-card>a{grid-row:1/span 2}
+  .story-card .story-meta,.news-card .story-meta{grid-column:1/-1;align-self:end;margin-top:6px}
+  .compact-story{grid-template-rows:auto auto auto;column-gap:12px;row-gap:0}
+  .compact-story>div{display:contents}
+  .compact-story>img{grid-column:1;grid-row:1/span 2}
+  .compact-story .eyebrow{grid-column:2;grid-row:1}
+  .compact-story h3{grid-column:2;grid-row:2;align-self:start}
+  .compact-story .story-meta{grid-column:1/-1;grid-row:3;align-self:end;margin-top:6px}
+}
+/* DH desktop metadata uses a full-width bottom row, including thumbnail stories. */
+@media (min-width:701px){
+  .hero-copy{padding-bottom:0}
+  .story-card,.premium-feature{display:flex;flex-direction:column}
+  .story-card>.story-meta,.premium-feature>.story-meta{margin-top:auto;padding-top:6px}
+  .compact-story{grid-template-rows:auto auto auto;row-gap:0}
+  .compact-story>div{display:contents}
+  .compact-story>img{grid-column:1;grid-row:1/span 2}
+  .compact-story .eyebrow{grid-column:2;grid-row:1}
+  .compact-story h3{grid-column:2;grid-row:2;align-self:start}
+  .compact-story .story-meta{grid-column:1/-1;grid-row:3;align-self:end;margin-top:6px}
+  body[data-mode="brandspot-lite"] .brandspot-story>a{grid-row:1/span 2}
+  body[data-mode="brandspot-lite"] .brandspot-story .story-meta{grid-column:1/-1;grid-row:3;align-self:end;margin-top:6px}
+}
+/* PV Ad Lite leads with a featured Premium story and two thumbnail stories. */
+.pv-premium-lead{display:none}
+body[data-pv-mode="ad-lite"] .pv-premium-lead{display:flex}
+body[data-pv-mode="ad-lite"] .pv-premium-row:first-of-type,
+body[data-pv-mode="ad-lite"] .pv-premium-row:nth-of-type(n+4){display:none}
+@media (max-width:700px){
+  .pv-premium-lead{display:flex}
+  .pv-premium-row:first-of-type,.pv-premium-row:nth-of-type(n+4){display:none}
+}
+
+/* The first visible PV With Ad premium story has no separator above it. */
+@media (min-width:701px){
+  body[data-pv-mode="with-ad"] .pv-premium-body .pv-premium-row:first-of-type{border-top:0;padding-top:0}
+}
+/* An additional ad follows the PV main story in mobile With Ad mode. */
+.pv-mobile-main-ad{display:none;width:300px;max-width:100%;margin:18px auto}
+.pv-mobile-main-ad span{display:block;text-align:center;color:var(--pv-muted);font:10px var(--pv-font);margin-bottom:5px}
+.pv-mobile-main-ad img{display:block;width:100%;height:auto}
+@media (max-width:700px){
+  body[data-pv-mode="with-ad"] .pv-mobile-main-ad{display:block}
 }
