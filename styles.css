@@ -323,10 +323,10 @@ body[data-pv-mode="with-ad"] .pv-premium-extra{display:none}
 .pv-premium-header{display:flex;align-items:center;justify-content:center;gap:10px;height:50px;padding:0 16px;background:var(--pv-premium-deep)}
 .pv-premium-header img{width:24px;height:24px;object-fit:contain}
 .pv-premium-header h2{margin:0;color:#fff2d9;font:600 20px var(--pv-font)}
-.pv-premium-body{padding:16px;display:flex;flex-direction:column;gap:12px}
+.pv-premium-body{padding:16px 14px;display:flex;flex-direction:column;gap:12px}
 .pv-premium-lead>a{display:block}
 .pv-premium-lead>a img{width:100%;aspect-ratio:1.5;border-radius:3px}
-.pv-premium-lead .pv-eyebrow{margin-top:8px}
+.pv-premium-lead .pv-eyebrow{margin-top:7px}
 .pv-premium-lead h3{font:600 20px/normal var(--pv-font);margin:4px 0}
 .pv-premium-sub{font-size:16px;color:var(--pv-body);line-height:normal;margin:0}
 .pv-premium-row{display:grid;grid-template-columns:minmax(0,42%) minmax(0,1fr);gap:10px;border-top:1px solid var(--pv-premium-border);padding-top:12px}
@@ -338,7 +338,7 @@ body[data-pv-mode="with-ad"] .pv-premium-extra{display:none}
 .pv-thumb-row>.pv-meta,.pv-premium-row>.pv-meta{grid-column:1/-1;align-self:end;margin-top:0}
 .pv-nandi-badge{float:left;width:1em;height:1em;object-fit:contain;margin:.1em .3em 0 0}
 .pv-premium-lead .pv-nandi-badge{margin-top:-.12em}
-.pv-premium-cta{display:block;margin-top:4px;padding:12px;text-align:center;text-decoration:none;background:var(--pv-cta);border-radius:3px;color:#111;font:600 16px var(--pv-font)}
+.pv-premium-cta{display:block;margin-top:4px;padding:10px;text-align:center;text-decoration:none;background:var(--pv-cta);border-radius:3px;color:#111;font:600 16px var(--pv-font)}
 
 /* --- PV desktop: stretch middle + premium to the lead column and distribute spacing
    so all three column bottoms align (mirrors DH's flex-fill technique). --- */
@@ -463,19 +463,16 @@ body[data-pv-mode="ad-lite"] .pv-premium-row:nth-of-type(n+4){display:none}
 @media (max-width:700px){
   body[data-pv-mode="with-ad"] .pv-mobile-main-ad{display:block}
 }
-/* Fit an extra PV Ad Lite premium story on desktops without increasing block height. */
-@media (min-width:1280px){
-  body[data-pv-mode="ad-lite"] .pv-premium-body{padding-top:8px;padding-bottom:8px;gap:4px}
-  body[data-pv-mode="ad-lite"] .pv-premium-row{padding-top:4px}
-  body[data-pv-mode="ad-lite"] .pv-premium-row:nth-of-type(4){display:grid}
-  body[data-pv-mode="ad-lite"] .pv-premium-cta{margin-top:0}
-}
 /* Fit a fourth PV With Ad premium story on desktops without adding block height. */
 @media (min-width:1280px){
   body[data-pv-mode="with-ad"] .pv-premium-body{padding-top:8px;padding-bottom:8px;gap:4px}
   body[data-pv-mode="with-ad"] .pv-premium-row{padding-top:4px}
   body[data-pv-mode="with-ad"] .pv-premium-row:nth-of-type(4){display:grid}
   body[data-pv-mode="with-ad"] .pv-premium-cta{margin-top:0}
+}
+/* Show a third PV Ad Lite premium story on wider desktops (matches DH's count). */
+@media (min-width:1280px){
+  body[data-pv-mode="ad-lite"] .pv-premium-row:nth-of-type(4){display:grid}
 }
 /* Balance PV mobile story spacing without stacking container gaps and padding. */
 @media (max-width:700px){
@@ -492,4 +489,74 @@ body[data-pv-mode="ad-lite"] .pv-premium-row:nth-of-type(n+4){display:none}
   .premium-heading{margin-bottom:0}
   .premium-list{gap:0}
   .premium-cta{margin-top:0}
+}
+/* Keep the mobile featured Premium icon inside the clamped PV heading. */
+@media (max-width:700px){
+  .pv-premium-lead .pv-nandi-badge{margin-top:0}
+}
+/* Balance PV desktop story padding while preserving the existing column heights. */
+@media (min-width:1051px){
+  .pv-hero-copy{padding-top:18px;padding-bottom:18px}
+  .pv-divider{margin-top:10px;margin-bottom:10px}
+  .pv-card,.pv-cinema,.pv-thumb-row{padding-top:6px;padding-bottom:6px}
+  .pv-middle-panel,.pv-middle-stories{gap:0}
+  body[data-pv-mode] .pv-premium-body{padding-top:4px;padding-bottom:8px;gap:0}
+  body[data-pv-mode] .pv-premium-row,.pv-premium-lead{padding-top:4px;padding-bottom:4px}
+  body[data-pv-mode="with-ad"] .pv-premium-body .pv-premium-row:first-of-type{padding-top:4px}
+  /* Give the Ad Lite featured lead a top gap matching its 16px sides; the flex
+     rows below absorb it, so the block height is unchanged. */
+  body[data-pv-mode="ad-lite"] .pv-premium-lead{padding-top:12px}
+  /* Match the middle column's 16px headline so the lead is compact enough to leave
+     room for three breathing thumbnail rows (like DH). */
+  body[data-pv-mode="ad-lite"] .pv-premium-lead h3{font-size:16px}
+}
+/* Center desktop Premium story content, reserving the bottom track for metadata. */
+@media (min-width:1051px){
+  body[data-pv-mode] .pv-premium-body>article{flex:1 1 0;min-height:0}
+  body[data-pv-mode] .pv-premium-row{grid-template-rows:minmax(0,1fr) auto minmax(min-content,1fr);align-content:stretch;row-gap:0;padding-top:0;padding-bottom:0}
+  body[data-pv-mode="with-ad"] .pv-premium-body .pv-premium-row:first-of-type{padding-top:0}
+  .pv-premium-row .pv-thumb-img,.pv-premium-row .pv-thumb-text{grid-row:2}
+  .pv-premium-row>.pv-meta{grid-row:3;padding-top:2px}
+  /* Ad Lite shows just two rows, so center each as one group (image+headline+meta)
+     with balanced top/bottom space instead of pinning the meta to the bottom. */
+  body[data-pv-mode="ad-lite"] .pv-premium-row{grid-template-rows:auto auto;align-content:center;row-gap:6px}
+  body[data-pv-mode="ad-lite"] .pv-premium-row .pv-thumb-img,
+  body[data-pv-mode="ad-lite"] .pv-premium-row .pv-thumb-text{grid-row:1}
+  body[data-pv-mode="ad-lite"] .pv-premium-row>.pv-meta{grid-row:2;padding-top:0}
+}
+/* Balance desktop More News stories while keeping metadata at the bottom. */
+@media (min-width:1051px){
+  .pv-middle-stories>.pv-cinema{flex:0 0 auto;font-size:14px;padding-top:calc(1lh + 2px);padding-bottom:0}
+  .pv-cinema>.pv-meta{margin-top:0;padding-top:2px}
+  .pv-middle-stories>.pv-thumb-row{flex:1 1 0;min-height:0;grid-template-rows:minmax(0,1fr) auto minmax(min-content,1fr);align-content:stretch;row-gap:0;padding-top:0;padding-bottom:0}
+  .pv-thumb-row>.pv-thumb-img,.pv-thumb-row>.pv-thumb-text{grid-row:2}
+  .pv-thumb-row>.pv-meta{grid-row:3;padding-top:2px}
+}
+
+/* Center both desktop More News dividers in the gaps between stories. */
+@media (min-width:1051px){
+  .pv-middle-stories>.pv-thumb-row{border-top-color:transparent}
+  .pv-middle-stories>.pv-thumb-row::before{content:"";grid-column:1/-1;grid-row:1;align-self:center;height:1px;background:var(--pv-line);pointer-events:none}
+}
+
+/* Equal outer spacing around the desktop PV Premium button. */
+@media (min-width:1051px){
+  body[data-pv-mode] .pv-premium-body{padding-bottom:16px}
+  body[data-pv-mode] .pv-premium-cta{margin-top:16px}
+}
+
+/* Give DH desktop hero metadata the same 16px outer padding as the copy above. */
+@media (min-width:1051px){
+  body[data-site="dh"] .hero-copy{padding-bottom:16px}
+}
+
+/* Align DH desktop columns by letting the main story fill the spare height. */
+@media (min-width:1051px){
+  body[data-site="dh"] .lead-column{display:flex;flex-direction:column}
+  body[data-site="dh"] .hero-story{display:flex;flex-direction:column;flex:1}
+  body[data-site="dh"] .hero-image-wrap{flex:none}
+  body[data-site="dh"] .hero-copy{display:flex;flex-direction:column;flex:1}
+  body[data-site="dh"] .hero-copy>*{flex-shrink:0}
+  body[data-site="dh"] .hero-copy>.story-meta{margin-top:auto;padding-top:8px}
+  body[data-site="dh"] .secondary-grid{flex:none}
 }
